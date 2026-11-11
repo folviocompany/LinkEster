@@ -1,0 +1,17 @@
+---
+import { ArrowUpRight, MapPin, MessageCircle } from '@lucide/astro';
+interface Props {
+  title: string;
+  description: string;
+  href?: string;
+  kind: 'booking' | 'location';
+}
+const { title, description, href, kind } = Astro.props;
+const Tag = href ? 'a' : 'button';
+const Icon = kind === 'booking' ? MessageCircle : MapPin;
+---
+<Tag class:list={['action-card', kind, 'group']} href={href} target={href ? '_blank' : undefined} rel={href ? 'noopener noreferrer' : undefined} disabled={!href || undefined} type={href ? undefined : 'button'} aria-label={`${title}${href ? ' (abre em uma nova aba)' : ' — em breve'}`}>
+  <span class="action-icon"><Icon size={23} stroke-width={1.45} aria-hidden="true" /></span>
+  <span class="action-copy"><span class="action-title">{title}</span><span class="action-description">{href ? description : 'Em breve.'}</span></span>
+  <ArrowUpRight class="action-arrow transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" size={19} stroke-width={1.4} aria-hidden="true" />
+</Tag>

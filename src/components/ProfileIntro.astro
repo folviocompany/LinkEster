@@ -1,0 +1,9 @@
+---
+import { site } from '../config/site';
+const [opening, ...ending] = site.headline.split(', ');
+---
+<section class="profile-intro text-center reveal" aria-labelledby="intro-title">
+  <p class="eyebrow">Seu olhar, sua essência</p>
+  <h1 id="intro-title">{opening}{ending.length > 0 && <>,<br /><em>{ending.join(', ')}</em></>}</h1>
+  <p class="intro-description">{site.description}</p>
+</section>

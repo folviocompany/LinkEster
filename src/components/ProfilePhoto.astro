@@ -1,0 +1,12 @@
+---
+import { site } from '../config/site';
+import Botanical from './Botanical.astro';
+---
+<div class="portrait-composition reveal">
+  <div class="portrait-outline" aria-hidden="true"></div>
+  <div class="portrait-frame">
+    <img src={site.photo} alt={site.photoAlt} width="720" height="891" fetchpriority="high" decoding="async" />
+  </div>
+  <Botanical class="portrait-flower" />
+  <span class="portrait-sparkle" aria-hidden="true">✧</span>
+</div>

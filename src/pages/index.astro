@@ -1,0 +1,29 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import BrandHeader from '../components/BrandHeader.astro';
+import ProfilePhoto from '../components/ProfilePhoto.astro';
+import ProfileIntro from '../components/ProfileIntro.astro';
+import ActionCard from '../components/ActionCard.astro';
+import Footer from '../components/Footer.astro';
+import Botanical from '../components/Botanical.astro';
+import { mapsUrl, site, whatsappUrl } from '../config/site';
+---
+<MainLayout>
+  <div class="page-decoration" aria-hidden="true">
+    <Botanical class="background-flower flower-left" />
+    <Botanical class="background-flower flower-right" />
+    <div class="page-hairline hairline-left"></div><div class="page-hairline hairline-right"></div>
+  </div>
+  <div class="page-shell mx-auto w-full">
+    <BrandHeader />
+    <main>
+      <ProfilePhoto />
+      <ProfileIntro />
+      <nav class="action-list flex flex-col reveal" aria-label="Agendamento e localização">
+        <ActionCard title="Agende seu horário" description="Seu momento de beleza começa aqui." href={whatsappUrl(site.whatsapp.phone, site.whatsapp.message)} kind="booking" />
+        <ActionCard title="Como chegar" description="Encontre nosso espaço de atendimento." href={mapsUrl(site.location.address, site.location.mapsUrl)} kind="location" />
+      </nav>
+    </main>
+    <Footer />
+  </div>
+</MainLayout>

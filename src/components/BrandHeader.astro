@@ -1,0 +1,10 @@
+---
+import { Flower2 } from '@lucide/astro';
+import { site } from '../config/site';
+const [first, ...rest] = site.name.split('By');
+---
+<header class="brand-header text-center">
+  <div class="brand-ornament" aria-hidden="true"><span></span><Flower2 size={19} stroke-width={1} /><span></span></div>
+  <p class="brand-name">{first}{rest.length > 0 && <><span>By</span>{rest.join('By')}</>}</p>
+  <p class="brand-specialty">{site.profession}</p>
+</header>
