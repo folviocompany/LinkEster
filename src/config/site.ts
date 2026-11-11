@@ -8,7 +8,7 @@ export const site = {
   photoAlt: 'Esterr, lash designer da BeautyByEsterr, em seu espaço de atendimento.',
   whatsapp: {
     phone: '5567984532330', // Código do país + DDD + número, somente dígitos.
-    message: 'Olá, Esterr! Vim pelo Instagram e gostaria de agendar um horário.',
+    message: 'Olá, Ester! Vim pelo Instagram e gostaria de agendar um horário.',
   },
   location: {
     address: '', // PREENCHER se desejar usar um endereço em vez do link abaixo.
