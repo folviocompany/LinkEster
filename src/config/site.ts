@@ -1,11 +1,11 @@
 // Edite os dados da profissional somente aqui.
 export const site = {
-  name: 'BeautyByEsterr',
+  name: 'BeautyByEster',
   profession: 'Lash Designer',
   headline: 'Realçando sua beleza, um olhar de cada vez.',
   description: 'Um toque de delicadeza para valorizar o que há de mais bonito em você.',
   photo: '/images/esterr.webp',
-  photoAlt: 'Esterr, lash designer da BeautyByEsterr, em seu espaço de atendimento.',
+  photoAlt: 'Ester, lash designer da BeautyByEsterr, em seu espaço de atendimento.',
   whatsapp: {
     phone: '5567984532330', // Código do país + DDD + número, somente dígitos.
     message: 'Olá, Ester! Vim pelo Instagram e gostaria de agendar um horário.',
@@ -17,7 +17,7 @@ export const site = {
   // PREENCHER após o primeiro deploy: https://seu-projeto.vercel.app
   url: '',
   seo: {
-    title: 'BeautyByEsterr | Lash Designer',
+    title: 'BeautyByEster | Lash Designer',
     description: 'Realçando sua beleza, um olhar de cada vez. Conheça a BeautyByEsterr, agende seu horário e encontre nosso espaço de atendimento.',
     image: '/og-image.png',
   },
