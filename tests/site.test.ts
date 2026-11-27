@@ -5,12 +5,12 @@ import { mapsUrl, publicUrl, whatsappUrl, site } from '../src/config/site.ts';
 test('WhatsApp preserva o número e codifica corretamente a mensagem em português', () => {
   const url = new URL(whatsappUrl(site.whatsapp.phone, site.whatsapp.message)!);
   assert.equal(url.hostname, 'wa.me');
-  assert.equal(url.pathname, '/5567984532330');
+  assert.equal(url.pathname, '/556792742036');
   assert.equal(url.searchParams.get('text'), site.whatsapp.message);
-  assert.equal(whatsappUrl('+55 (67) 98453-2330', 'Olá!'), 'https://wa.me/5567984532330?text=Ol%C3%A1!');
+  assert.equal(whatsappUrl('+55 (67) 9274-2036', 'Olá!'), 'https://wa.me/556792742036?text=Ol%C3%A1!');
 });
 test('Dados ausentes e placeholders não criam links falsos', () => {
-  for (const phone of ['', '55DDDNUMERO', '123', '5567984532330?text=teste']) assert.equal(whatsappUrl(phone, 'Olá'), undefined);
+  for (const phone of ['', '55DDDNUMERO', '123', '556792742036?text=teste']) assert.equal(whatsappUrl(phone, 'Olá'), undefined);
   assert.equal(mapsUrl(''), undefined);
   assert.equal(publicUrl('/'), undefined);
 });

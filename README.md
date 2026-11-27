@@ -17,7 +17,7 @@ Abra o endereço exibido no terminal (normalmente http://127.0.0.1:4321).
 
 Edite `src/config/site.ts`:
 
-- `whatsapp.phone`: número completo com código do país. Já configurado como `5567984532330`.
+- `whatsapp.phone`: número completo com código do país. Já configurado como `556792742036`.
 - `whatsapp.message`: texto automático do primeiro contato.
 - `location.mapsUrl`: link do Google Maps fornecido, já configurado.
 - `location.address`: opcional. Para usar o endereço escrito, preencha este campo e deixe `mapsUrl` vazio. O link direto tem prioridade.
